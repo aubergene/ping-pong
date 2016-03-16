@@ -9,7 +9,7 @@
 
 	<script type="text/javascript">
 
-	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(function(d) { document.body.appendChild(document.createElement('div')); });
+  d3.select('body').selectAll('.lines').data(d3.range(25)).enter().append('div').style('height', function(d) { return Math.ceil(Math.random() * 25) + 'px'; });
 
 	</script>
   </body>
