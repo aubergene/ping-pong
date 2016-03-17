@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <title>Game 01</title>
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <style type="text/css">
+    </style>
   </head>
   <body>
 
 	<script type="text/javascript">
 
-  d3.select('body').selectAll('.lines').data(d3.range(25)).enter().append('div').style('height', function(d) { return Math.ceil(Math.random() * 25) + 'px'; });
+  d3.select('body').selectAll('.lines').data(d3.range(25)).enter().append('div').attr('class', 'lines').style('height', function(d) { return Math.ceil(Math.random() * 25) + 'px'; });
 
   d3.select('body').append('div').selectAll('span').data(window.atob("SGVsbG8gS2VubmVkeSE=").split('')).enter().append('span').text(function(d) { return d })
 	</script>
