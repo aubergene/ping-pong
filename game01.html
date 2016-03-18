@@ -15,6 +15,7 @@
   d3.select('body').selectAll('.lines').data(d3.range(25)).enter().append('div').attr('class', 'lines').style('height', function(d) { return Math.ceil(Math.random() * 25) + 'px'; });
 
   d3.select('body').append('div').selectAll('span').data(window.atob("SGVsbG8gS2VubmVkeSE=").split('')).enter().append('span').text(function(d) { return d })
+    .style({position:'relative', top:'0px'}).transition().duration(250).delay(function(d, i) { return 1000 + 10 * i}).style('top', '40px').each('end', function() { d3.select(this).transition().duration(250).delay(function(d, i) { return 10 * i}).style('top', '0px') })
 	</script>
   </body>
 </html>
